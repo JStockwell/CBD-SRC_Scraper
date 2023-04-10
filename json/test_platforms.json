@@ -1,0 +1,802 @@
+{
+   "jm951reo": {
+      "name": "2DS",
+      "released": 2013
+   },
+   "nzelm79q": {
+      "name": "2DS Backwards Compatibility",
+      "released": 2013
+   },
+   "o064vv63": {
+      "name": "2DS XL",
+      "released": 2017
+   },
+   "8gejmne3": {
+      "name": "3DO Interactive Multiplayer",
+      "released": 1993
+   },
+   "vm9vw163": {
+      "name": "3DS Backwards Compatibility",
+      "released": 2012
+   },
+   "mx6pow93": {
+      "name": "Acorn Archimedes",
+      "released": 1987
+   },
+   "o7e2dj6w": {
+      "name": "Advanced Pico Beena",
+      "released": 2005
+   },
+   "gz9qv3e0": {
+      "name": "Airplane Seats",
+      "released": 1925
+   },
+   "mr6ko5ez": {
+      "name": "Amazon Fire TV",
+      "released": 2014
+   },
+   "gde32g6k": {
+      "name": "Amiga",
+      "released": 1985
+   },
+   "wxeo0der": {
+      "name": "Amiga CD32",
+      "released": 1993
+   },
+   "5negykey": {
+      "name": "Amstrad CPC",
+      "released": 1984
+   },
+   "gde3vw9k": {
+      "name": "Amstrad PCW",
+      "released": 1985
+   },
+   "3167pk6q": {
+      "name": "Analogue Nt",
+      "released": 2015
+   },
+   "kz9wlm6p": {
+      "name": "Analogue Nt Mini",
+      "released": 2015
+   },
+   "gz9qg3e0": {
+      "name": "Analogue Super Nt",
+      "released": 2018
+   },
+   "lq60nl94": {
+      "name": "Android",
+      "released": 2008
+   },
+   "n5e15292": {
+      "name": "AndroidTV",
+      "released": 2014
+   },
+   "w89ryw6l": {
+      "name": "Apple II",
+      "released": 1977
+   },
+   "7g6mom9r": {
+      "name": "Apple IIGS",
+      "released": 1986
+   },
+   "vm9vz163": {
+      "name": "Apple TV",
+      "released": 2007
+   },
+   "vm9vy893": {
+      "name": "Apple Watch",
+      "released": 2015
+   },
+   "vm9vn63k": {
+      "name": "Arcade",
+      "released": 1980
+   },
+   "mr6k206z": {
+      "name": "Arduboy",
+      "released": 2015
+   },
+   "o0644863": {
+      "name": "Atari 2600",
+      "released": 1977
+   },
+   "lq60ol64": {
+      "name": "Atari 5200",
+      "released": 1982
+   },
+   "gde33gek": {
+      "name": "Atari 7800",
+      "released": 1986
+   },
+   "n5e1m7e2": {
+      "name": "Atari 8-bit family (400/800/XL/XE)",
+      "released": 1979
+   },
+   "jm9577eo": {
+      "name": "Atari Flashback",
+      "released": 2012
+   },
+   "jm95oz6o": {
+      "name": "Atari Jaguar",
+      "released": 1993
+   },
+   "kz9wzm9p": {
+      "name": "Atari Jaguar CD",
+      "released": 1995
+   },
+   "o0641163": {
+      "name": "Atari Lynx",
+      "released": 1989
+   },
+   "n5e1g7e2": {
+      "name": "Atari ST",
+      "released": 1985
+   },
+   "gde3qn6k": {
+      "name": "Atari VCS",
+      "released": 2021
+   },
+   "v06dvz64": {
+      "name": "backwards-compatible PlayStation 3",
+      "released": 2006
+   },
+   "gz9q2390": {
+      "name": "BBC Micro",
+      "released": 1981
+   },
+   "n5685z6v": {
+      "name": "Binary Runtime Environment for Wireless",
+      "released": 1999
+   },
+   "83ex5m6l": {
+      "name": "Casio PV-2000",
+      "released": 1983
+   },
+   "7g6mp36r": {
+      "name": "Chromebook",
+      "released": 2011
+   },
+   "wxeo8d6r": {
+      "name": "ColecoVision",
+      "released": 1982
+   },
+   "gz9qox60": {
+      "name": "Commodore 64",
+      "released": 1982
+   },
+   "4p9zrz6r": {
+      "name": "Commodore 64 Mini",
+      "released": 2018
+   },
+   "p36n4x98": {
+      "name": "Commodore CDTV",
+      "released": 1991
+   },
+   "w89ryd6l": {
+      "name": "Commodore VIC-20",
+      "released": 1980
+   },
+   "lq60rd64": {
+      "name": "Dragon 32/64",
+      "released": 1982
+   },
+   "v06d394z": {
+      "name": "Dreamcast",
+      "released": 1999
+   },
+   "wxeo3zer": {
+      "name": "DSi",
+      "released": 2008
+   },
+   "p36n0me8": {
+      "name": "DVD Player",
+      "released": 1996
+   },
+   "n5e1kg92": {
+      "name": "Evercade",
+      "released": 2020
+   },
+   "gde31w9k": {
+      "name": "Fairchild Channel F",
+      "released": 1983
+   },
+   "gde3owek": {
+      "name": "Famicom",
+      "released": 1983
+   },
+   "mr6k409z": {
+      "name": "Famicom Disk System",
+      "released": 1986
+   },
+   "7m6yqvep": {
+      "name": "Flash",
+      "released": 1996
+   },
+   "jm95k79o": {
+      "name": "FM Towns",
+      "released": 1989
+   },
+   "gz9qkx90": {
+      "name": "Game & Watch",
+      "released": 1980
+   },
+   "n5683oev": {
+      "name": "Game Boy",
+      "released": 1989
+   },
+   "3167d6q2": {
+      "name": "Game Boy Advance",
+      "released": 2001
+   },
+   "gde3g9k1": {
+      "name": "Game Boy Color",
+      "released": 1998
+   },
+   "vm9v3ne3": {
+      "name": "Game Boy Interface",
+      "released": 2015
+   },
+   "7m6yvw6p": {
+      "name": "Game Boy Player",
+      "released": 2003
+   },
+   "31672keq": {
+      "name": "Game.Com",
+      "released": 1997
+   },
+   "4p9z06rn": {
+      "name": "GameCube",
+      "released": 2001
+   },
+   "31674w6q": {
+      "name": "GamePark 32",
+      "released": 2001
+   },
+   "5neg076y": {
+      "name": "Gizmondo",
+      "released": 2005
+   },
+   "o064z1e3": {
+      "name": "Google Stadia",
+      "released": 2019
+   },
+   "gz9qwx90": {
+      "name": "Graphing Calculator",
+      "released": 1985
+   },
+   "w89rwwel": {
+      "name": "HTC Vive",
+      "released": 2016
+   },
+   "jm9517eo": {
+      "name": "Hyperscan",
+      "released": 2006
+   },
+   "o0643893": {
+      "name": "Intellivision",
+      "released": 1979
+   },
+   "gde3xgek": {
+      "name": "iOS",
+      "released": 2007
+   },
+   "mr6k159z": {
+      "name": "iPod",
+      "released": 2001
+   },
+   "p36nd598": {
+      "name": "iQue Player",
+      "released": 2003
+   },
+   "nzel5r6q": {
+      "name": "Java Phone",
+      "released": 1998
+   },
+   "8gejwk93": {
+      "name": "LCD handheld",
+      "released": 1978
+   },
+   "nzel3veq": {
+      "name": "Leapfrog Didj",
+      "released": 2008
+   },
+   "7m6ypz6p": {
+      "name": "Leapster Learning Game System",
+      "released": 2003
+   },
+   "n5e1n292": {
+      "name": "Leapster TV",
+      "released": 2005
+   },
+   "5neg7key": {
+      "name": "Linux",
+      "released": 1991
+   },
+   "v06ddw64": {
+      "name": "LSI",
+      "released": 1976
+   },
+   "mx6ppw63": {
+      "name": "Macintosh",
+      "released": 1984
+   },
+   "p36npx98": {
+      "name": "Magnavox Odyssey",
+      "released": 1972
+   },
+   "w89rqdel": {
+      "name": "Magnavox Odyssey 2",
+      "released": 1978
+   },
+   "5negp7ey": {
+      "name": "Mega Sg",
+      "released": 2019
+   },
+   "mx6px493": {
+      "name": "MegaNet",
+      "released": 1995
+   },
+   "gde3rwek": {
+      "name": "MiSTer",
+      "released": 2018
+   },
+   "mr6km09z": {
+      "name": "MS-DOS",
+      "released": 1970
+   },
+   "jm950z6o": {
+      "name": "MSX",
+      "released": 1983
+   },
+   "83exkk6l": {
+      "name": "MSX2",
+      "released": 1985
+   },
+   "83exlkel": {
+      "name": "N-Gage",
+      "released": 2003
+   },
+   "7g6mw8er": {
+      "name": "NEC PC-88 series",
+      "released": 1981
+   },
+   "o064r893": {
+      "name": "NEC PC-98 series",
+      "released": 1982
+   },
+   "mx6p4w63": {
+      "name": "Neo Geo AES",
+      "released": 1990
+   },
+   "kz9w7mep": {
+      "name": "Neo Geo CD",
+      "released": 1994
+   },
+   "n5e1z292": {
+      "name": "Neo Geo Mini",
+      "released": 2018
+   },
+   "7m6ydw6p": {
+      "name": "Neo Geo Pocket Color",
+      "released": 1998
+   },
+   "o7e2lj9w": {
+      "name": "Neo Geo X",
+      "released": 2012
+   },
+   "kz9wynep": {
+      "name": "NES Classic Mini",
+      "released": 2016
+   },
+   "kz9wqn9p": {
+      "name": "New Nintendo 3DS",
+      "released": 2014
+   },
+   "v06do394": {
+      "name": "New Nintendo 3DS Virtual Console",
+      "released": 2014
+   },
+   "gz9qx60q": {
+      "name": "Nintendo 3DS",
+      "released": 2011
+   },
+   "7g6mx89r": {
+      "name": "Nintendo 3DS Virtual Console",
+      "released": 2011
+   },
+   "w89rwelk": {
+      "name": "Nintendo 64",
+      "released": 1996
+   },
+   "83ex5v6l": {
+      "name": "Nintendo 64 Disk Drive",
+      "released": 1999
+   },
+   "7g6m8erk": {
+      "name": "Nintendo DS",
+      "released": 2004
+   },
+   "jm95z9ol": {
+      "name": "Nintendo Entertainment System",
+      "released": 1983
+   },
+   "kz9wdmep": {
+      "name": "Nintendo Switch Lite",
+      "released": 2019
+   },
+   "p36nyx98": {
+      "name": "Nt Mini Noir",
+      "released": 2017
+   },
+   "o064v163": {
+      "name": "Nuon",
+      "released": 2000
+   },
+   "v06dmz64": {
+      "name": "Nvidia Shield",
+      "released": 2015
+   },
+   "o064o193": {
+      "name": "Oculus Quest",
+      "released": 2019
+   },
+   "4p9zq09r": {
+      "name": "Oculus VR",
+      "released": 2016
+   },
+   "8gej5193": {
+      "name": "Oric",
+      "released": 1983
+   },
+   "nzeloreq": {
+      "name": "Ouya",
+      "released": 2012
+   },
+   "nzelrveq": {
+      "name": "Palm OS",
+      "released": 1996
+   },
+   "8gej2n93": {
+      "name": "PC",
+      "released": 1970
+   },
+   "p36n8568": {
+      "name": "PC-FX",
+      "released": 1994
+   },
+   "w89rjw6l": {
+      "name": "Philips CD-i",
+      "released": 1991
+   },
+   "n568qz6v": {
+      "name": "PICO-8",
+      "released": 2013
+   },
+   "o7e2q3ew": {
+      "name": "Playdate",
+      "released": 2022
+   },
+   "wxeod9rn": {
+      "name": "PlayStation",
+      "released": 1994
+   },
+   "n5e17e27": {
+      "name": "PlayStation 2",
+      "released": 2000
+   },
+   "mx6pwe3g": {
+      "name": "PlayStation 3",
+      "released": 2006
+   },
+   "nzelkr6q": {
+      "name": "PlayStation 4",
+      "released": 2013
+   },
+   "nzeljv9q": {
+      "name": "PlayStation 4 Pro",
+      "released": 2016
+   },
+   "4p9zjrer": {
+      "name": "PlayStation 5",
+      "released": 2020
+   },
+   "o7e2vj6w": {
+      "name": "PlayStation Classic",
+      "released": 2018
+   },
+   "wxeo5z6r": {
+      "name": "PlayStation Now",
+      "released": 2014
+   },
+   "5negk9y7": {
+      "name": "PlayStation Portable",
+      "released": 2004
+   },
+   "lq60gle4": {
+      "name": "PlayStation TV",
+      "released": 2013
+   },
+   "4p9z70er": {
+      "name": "PlayStation Vita",
+      "released": 2011
+   },
+   "3167od9q": {
+      "name": "Plug and Play",
+      "released": 1970
+   },
+   "5neg3o6y": {
+      "name": "Pocket Dream Console",
+      "released": 2006
+   },
+   "vm9vr1e3": {
+      "name": "Pok\u00e9mon Mini",
+      "released": 2001
+   },
+   "wxeo1o9r": {
+      "name": "Pong Consoles",
+      "released": 1972
+   },
+   "v06dpz64": {
+      "name": "PS5 for backward compatible games",
+      "released": 2020
+   },
+   "wxeo2d6r": {
+      "name": "PSN Download",
+      "released": 2006
+   },
+   "7g6mym6r": {
+      "name": "retroUSB AVS",
+      "released": 2021
+   },
+   "jm95l76o": {
+      "name": "Roku",
+      "released": 2020
+   },
+   "83exokel": {
+      "name": "Satellaview",
+      "released": 1995
+   },
+   "kz9wrn6p": {
+      "name": "Sega 32X",
+      "released": 1994
+   },
+   "31670d9q": {
+      "name": "Sega CD",
+      "released": 1992
+   },
+   "w89r3w9l": {
+      "name": "Sega Game Gear",
+      "released": 1990
+   },
+   "mr6k0ezw": {
+      "name": "Sega Genesis",
+      "released": 1988
+   },
+   "mx6p3493": {
+      "name": "Sega Genesis Mini",
+      "released": 2019
+   },
+   "83exwk6l": {
+      "name": "Sega Master System",
+      "released": 1985
+   },
+   "7m6yjz6p": {
+      "name": "Sega Pico",
+      "released": 1993
+   },
+   "lq60l642": {
+      "name": "Sega Saturn",
+      "released": 1994
+   },
+   "83expv9l": {
+      "name": "SG-1000",
+      "released": 1983
+   },
+   "o0641863": {
+      "name": "Sharp X1",
+      "released": 1982
+   },
+   "83exovel": {
+      "name": "SNES Classic Mini",
+      "released": 2017
+   },
+   "w89rqoel": {
+      "name": "Steam Deck",
+      "released": 2022
+   },
+   "5negr76y": {
+      "name": "Super Cassette Vision",
+      "released": 1984
+   },
+   "31677k6q": {
+      "name": "Super Famicom",
+      "released": 1990
+   },
+   "gz9q0560": {
+      "name": "Super Famicom Turbo",
+      "released": 1996
+   },
+   "3167jd6q": {
+      "name": "Super Game Boy",
+      "released": 1994
+   },
+   "n5e147e2": {
+      "name": "Super Game Boy 2",
+      "released": 1998
+   },
+   "83exk6l5": {
+      "name": "Super Nintendo",
+      "released": 1990
+   },
+   "7m6ylw9p": {
+      "name": "Switch",
+      "released": 2017
+   },
+   "mx6p1463": {
+      "name": "Switch Virtual Console",
+      "released": 2018
+   },
+   "wxeogz9r": {
+      "name": "SwitchOLED",
+      "released": 2021
+   },
+   "vm9vkn63": {
+      "name": "Tabletop",
+      "released": 1970
+   },
+   "8gejn193": {
+      "name": "Tamagotchi",
+      "released": 1996
+   },
+   "mx6pq4e3": {
+      "name": "Tapwave Zodiac",
+      "released": 2003
+   },
+   "5nego76y": {
+      "name": "Texas Instruments TI-99/4A",
+      "released": 1981
+   },
+   "lq604de4": {
+      "name": "TI-84",
+      "released": 2004
+   },
+   "4p9zprer": {
+      "name": "TIC-80",
+      "released": 2017
+   },
+   "3167qkeq": {
+      "name": "Tiger",
+      "released": 1978
+   },
+   "p36nlxe8": {
+      "name": "TurboGrafx-16 CD-ROM",
+      "released": 1998
+   },
+   "jm95w79o": {
+      "name": "TurboGrafx-16 Mini",
+      "released": 2020
+   },
+   "5negxk6y": {
+      "name": "TurboGrafx-16/PC Engine",
+      "released": 1987
+   },
+   "8gej8n93": {
+      "name": "V.Smile",
+      "released": 2004
+   },
+   "83exvv9l": {
+      "name": "Valve Index",
+      "released": 2019
+   },
+   "7g6m1m6r": {
+      "name": "Vectrex",
+      "released": 1982
+   },
+   "mx6pgx63": {
+      "name": "Video Game Machine - Multiframe Colour - 1",
+      "released": 1980
+   },
+   "7g6mk8er": {
+      "name": "Virtual Boy",
+      "released": 1995
+   },
+   "o7e25xew": {
+      "name": "Web",
+      "released": 10000
+   },
+   "v06dk3e4": {
+      "name": "Wii",
+      "released": 2006
+   },
+   "lq60qp94": {
+      "name": "Wii Backwards compatibility",
+      "released": 2006
+   },
+   "w89rdd6l": {
+      "name": "Wii Mini",
+      "released": 2012
+   },
+   "8gejn93d": {
+      "name": "Wii U",
+      "released": 2012
+   },
+   "v06dr394": {
+      "name": "Wii U Virtual Console",
+      "released": 2012
+   },
+   "nzelreqp": {
+      "name": "Wii Virtual Console",
+      "released": 2006
+   },
+   "lq60mde4": {
+      "name": "WiiU Backwards Compatibility",
+      "released": 2012
+   },
+   "w89r4d6l": {
+      "name": "Windows Mixed Reality",
+      "released": 2017
+   },
+   "p36no5e8": {
+      "name": "Windows Phone",
+      "released": 2010
+   },
+   "vm9v8n63": {
+      "name": "WonderSwan",
+      "released": 1999
+   },
+   "n568kz6v": {
+      "name": "Wonderswan Colour",
+      "released": 2000
+   },
+   "n5681o9v": {
+      "name": "X68000",
+      "released": 1987
+   },
+   "jm95zz9o": {
+      "name": "Xbox",
+      "released": 2001
+   },
+   "n568oevp": {
+      "name": "Xbox 360",
+      "released": 2005
+   },
+   "lq60vde4": {
+      "name": "Xbox 360 Arcade",
+      "released": 2007
+   },
+   "mr6k0gez": {
+      "name": "Xbox 360 Backwards Compatibility",
+      "released": 2005
+   },
+   "kz9w4oep": {
+      "name": "Xbox Game Pass",
+      "released": 2017
+   },
+   "o7e2mx6w": {
+      "name": "Xbox One",
+      "released": 2013
+   },
+   "o064j163": {
+      "name": "Xbox One S",
+      "released": 2013
+   },
+   "4p9z0r6r": {
+      "name": "Xbox One X",
+      "released": 2017
+   },
+   "o7e2xj9w": {
+      "name": "Xbox Series S",
+      "released": 2020
+   },
+   "nzelyv9q": {
+      "name": "Xbox Series X",
+      "released": 2020
+   },
+   "7m6y2zep": {
+      "name": "Zeebo",
+      "released": 2009
+   },
+   "n568zo6v": {
+      "name": "ZX Spectrum",
+      "released": 1982
+   }
+}
