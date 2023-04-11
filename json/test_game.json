@@ -1,0 +1,592 @@
+{
+   "name": "Shadow of the Colossus (2018)",
+   "weblink": "https://www.speedrun.com/sotc_2018",
+   "release-date": "2018-02-06",
+   "platforms": [
+      "nzelkr6q",
+      "nzeljv9q",
+      "4p9zjrer"
+   ],
+   "regions": [
+      "pr184lqn",
+      "e6lxy1dz",
+      "o316x197"
+   ],
+   "categories": {
+      "5dw5v55d": {
+         "name": "Any%",
+         "weblink": "https://www.speedrun.com/sotc_2018#Any",
+         "type": "per-game",
+         "rules": "- Starting in New Game, defeat the game as quickly as possible in one segment.\r\nIt is not allowed to quit out and reload the save-file.\r\n\r\n- Runs use the In-Game Timer (IGT) as the primary timing convention. In order to submit a run with the In-Game Timer, you must let the credits play and navigate to the main menu after the credits to display your In-Game Time. You must also include difficulty select in the beginning of your submission video.\r\n\r\n- RTA is the secondary timing method and is not required. Submitting RTA only is allowed but the run will be placed below those with IGT. Timing starts upon selecting difficulty. Timing ends when the final cutscene triggers after Wander enters the pool.",
+         "variables": {
+            "wl36j6yl": {
+               "name": "Difficulty",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": true,
+               "values": {
+                  "xqkr6341": {
+                     "label": "Easy",
+                     "rules": null,
+                     "flags": {
+                        "miscellaneous": null
+                     }
+                  },
+                  "gq7nzor1": {
+                     "label": "Normal",
+                     "rules": null,
+                     "flags": {
+                        "miscellaneous": null
+                     }
+                  },
+                  "21gjo6o1": {
+                     "label": "Hard",
+                     "rules": null,
+                     "flags": {
+                        "miscellaneous": null
+                     }
+                  }
+               },
+               "is-subcategory": true
+            },
+            "68km1mkl": {
+               "name": "SSD",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": false,
+               "values": {
+                  "gq7nzod1": {
+                     "label": "Yes"
+                  },
+                  "21gjo681": {
+                     "label": "No"
+                  }
+               },
+               "is-subcategory": false
+            }
+         }
+      },
+      "7kjp4p3k": {
+         "name": "Individual Normal Time Attack",
+         "weblink": "https://www.speedrun.com/sotc_2018",
+         "type": "per-level",
+         "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+         "variables": {}
+      },
+      "xk9g1gvd": {
+         "name": "Individual Hard Time Attack",
+         "weblink": "https://www.speedrun.com/sotc_2018",
+         "type": "per-level",
+         "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+         "variables": {}
+      },
+      "5dw5v75d": {
+         "name": "Boss Rush",
+         "weblink": "https://www.speedrun.com/sotc_2018#Boss_Rush",
+         "type": "per-game",
+         "rules": "",
+         "variables": {
+            "wle6g628": {
+               "name": "Difficulty/Mode",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": true,
+               "values": {
+                  "jqz6ywk1": {
+                     "label": "NTA",
+                     "rules": "- In New Game+ (Normal difficulty) defeat all sixteen time attacks in game order in a single segment. Times will be calculated using the Boss Rush Calculator spreadsheet found in the resources section.\r\n\r\n- Runs may be submitted using Real Time but the run will be converted into In-Game Time by the moderators upon submission. Real Time starts when you hit \"yes\" at the statue of Valus and ends when Malus' death cutscene begins.",
+                     "flags": {
+                        "miscellaneous": false
+                     }
+                  },
+                  "klrz6dw1": {
+                     "label": "HTA",
+                     "rules": "- In New Game+ (Hard difficulty) defeat all sixteen time attacks in game order in a single segment. Times will be calculated using the Boss Rush Calculator spreadsheet found in the resources section.\r\n\r\n- Runs may be submitted using Real Time but the run will be converted into In-Game Time by the moderators upon submission. Real Time starts when you hit \"yes\" at the statue of Valus and ends when Malus' death cutscene begins.",
+                     "flags": {
+                        "miscellaneous": false
+                     }
+                  }
+               },
+               "is-subcategory": true
+            },
+            "68km1mkl": {
+               "name": "SSD",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": false,
+               "values": {
+                  "gq7nzod1": {
+                     "label": "Yes"
+                  },
+                  "21gjo681": {
+                     "label": "No"
+                  }
+               },
+               "is-subcategory": false
+            }
+         }
+      },
+      "7dg9oqpk": {
+         "name": "NG+",
+         "weblink": "https://www.speedrun.com/sotc_2018#NG",
+         "type": "per-game",
+         "rules": "",
+         "variables": {
+            "68km1mkl": {
+               "name": "SSD",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": false,
+               "values": {
+                  "gq7nzod1": {
+                     "label": "Yes"
+                  },
+                  "21gjo681": {
+                     "label": "No"
+                  }
+               },
+               "is-subcategory": false
+            },
+            "kn0jqd3l": {
+               "name": "Sub-category",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": true,
+               "values": {
+                  "rqvoknyl": {
+                     "label": "Any%",
+                     "rules": "- Starting in New Game + defeat the game as quickly as possible in one segment.\r\n\r\n- Any difficulty option is allowed.\r\n\r\n- It is allowed and recommended to have all items and max stamina/health.\r\n\r\n- Runs use the In-Game Time as the primary timing convention. In order to submit a run with the In-Game Timer, you must let the credits play and navigate to the main menu after the credits to display your In-Game Time. You must also include difficulty select in the beginning of your submission video.\r\n\r\n- Real Time is the secondary timing method and is not required. Submitting Real Time only is allowed but the run will be placed below those with In-Game Times. Timing starts upon selecting difficulty. Timing ends when the final cutscene triggers after Wander enters the pool.",
+                     "flags": {
+                        "miscellaneous": false
+                     }
+                  },
+                  "5lez6x6l": {
+                     "label": "All Glints",
+                     "rules": "- Starting in New Game + acquire all of the 79 glints/coins and the Dormin's Sword. \r\n\r\n- Any difficulty option is allowed.\r\n\r\n- It is allowed and recommended to have all items and max stamina/health. \r\n\r\n- It is allowed to quit out of the game and load the save-file, ONLY IF you saved right before quitting out. Collecting a glint or the Dormin's Sword saves the game automatically, so a manual save isn't required.\r\n\r\n- Runs use the In-Game Time as the primary timing convention. In order to submit a run with the In-Game Timer, you must quit out of the game once you collect Dormin's sword, the main menu will display your time.  You must also include difficulty select in the beginning of your submission video.\r\n\r\n- Real Time is the secondary timing method and is not required. Submitting Real Time only is allowed but the run will be placed below those with an In-Game Time. Timing starts upon selecting difficulty. Timing ends when Dormin's Sword is collected.",
+                     "flags": {
+                        "miscellaneous": false
+                     }
+                  }
+               },
+               "is-subcategory": true
+            },
+            "6nj4g9pn": {
+               "name": "Item Menu Glitch",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": true,
+               "values": {
+                  "0137oyyl": {
+                     "label": "NO IMG",
+                     "rules": "* NO IMG : Item Menu Glitch is not allowed.",
+                     "flags": {
+                        "miscellaneous": false
+                     }
+                  },
+                  "zqoo874q": {
+                     "label": "IMG",
+                     "rules": "* IMG : Item Menu Glitch is allowed.",
+                     "flags": {
+                        "miscellaneous": false
+                     }
+                  }
+               },
+               "is-subcategory": true
+            }
+         }
+      },
+      "zd374nr2": {
+         "name": "Platinum",
+         "weblink": "https://www.speedrun.com/sotc_2018#Platinum",
+         "type": "per-game",
+         "rules": "- Time starts at difficulty selection. The runner has to obtain every trophy in the game. This is to be done on a new User Profile every time the run is attempted. \r\n\r\n- Time ends when the Platinum Trophy is obtained. \r\n\r\n- Runs use the Real Time (RT) timing convention.",
+         "variables": {
+            "68km1mkl": {
+               "name": "SSD",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": false,
+               "values": {
+                  "gq7nzod1": {
+                     "label": "Yes"
+                  },
+                  "21gjo681": {
+                     "label": "No"
+                  }
+               },
+               "is-subcategory": false
+            }
+         }
+      },
+      "jdz94eg2": {
+         "name": "100%",
+         "weblink": "https://www.speedrun.com/sotc_2018#100",
+         "type": "per-game",
+         "rules": "- Time starts at difficulty selection. The runner has to obtain every trophy in the game, acquire the Dormin's Sword and complete the Art Gallery in the Main Menu. This is to be done on a new User Profile every time the run is attempted. \r\n\r\n- Having acquired the Platinum Trophy and the Dormin's Sword, time ends on the last quit-out, after which you need to show the entire gallery for verification purposes.\r\n\r\n- Runs use the Real Time (RT) timing convention.",
+         "variables": {
+            "68km1mkl": {
+               "name": "SSD",
+               "scope": {
+                  "type": "full-game"
+               },
+               "mandatory": false,
+               "values": {
+                  "gq7nzod1": {
+                     "label": "Yes"
+                  },
+                  "21gjo681": {
+                     "label": "No"
+                  }
+               },
+               "is-subcategory": false
+            }
+         }
+      }
+   },
+   "levels": {
+      "z987887w": {
+         "name": "1 Valus",
+         "weblink": "https://www.speedrun.com/sotc_2018/1_Valus",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/1_Valus#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/1_Valus#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "ldygppjd": {
+         "name": "2 Quadratus",
+         "weblink": "https://www.speedrun.com/sotc_2018/2_Quadratus",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/2_Quadratus#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/2_Quadratus#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "gdrxqq8d": {
+         "name": "3 Gaius",
+         "weblink": "https://www.speedrun.com/sotc_2018/3_Gaius",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/3_Gaius#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/3_Gaius#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "nwlo77pw": {
+         "name": "4 Phaedra",
+         "weblink": "https://www.speedrun.com/sotc_2018/4_Phaedra",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/4_Phaedra#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/4_Phaedra#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "ywe588qw": {
+         "name": "5 Avion",
+         "weblink": "https://www.speedrun.com/sotc_2018/5_Avion",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/5_Avion#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/5_Avion#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "69z24469": {
+         "name": "6 Barba",
+         "weblink": "https://www.speedrun.com/sotc_2018/6_Barba",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/6_Barba#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/6_Barba#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "r9g433q9": {
+         "name": "7 Hydrus",
+         "weblink": "https://www.speedrun.com/sotc_2018/7_Hydrus",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/7_Hydrus#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/7_Hydrus#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "o9x7ll6d": {
+         "name": "8 Kuromori",
+         "weblink": "https://www.speedrun.com/sotc_2018/8_Kuromori",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/8_Kuromori#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/8_Kuromori#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "49558829": {
+         "name": "9 Basaran",
+         "weblink": "https://www.speedrun.com/sotc_2018/9_Basaran",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/9_Basaran#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/9_Basaran#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "rdq711m9": {
+         "name": "10 Dirge",
+         "weblink": "https://www.speedrun.com/sotc_2018/10_Dirge",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/10_Dirge#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/10_Dirge#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "5d74335d": {
+         "name": "11 Celosia",
+         "weblink": "https://www.speedrun.com/sotc_2018/11_Celosia",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/11_Celosia#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/11_Celosia#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "kwjzeer9": {
+         "name": "12 Pelagia",
+         "weblink": "https://www.speedrun.com/sotc_2018/12_Pelagia",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/12_Pelagia#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/12_Pelagia#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "owo622vw": {
+         "name": "13 Phalanx",
+         "weblink": "https://www.speedrun.com/sotc_2018/13_Phalanx",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/13_Phalanx#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/13_Phalanx#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "xd1255qw": {
+         "name": "14 Cenobia",
+         "weblink": "https://www.speedrun.com/sotc_2018/14_Cenobia",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/14_Cenobia#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/14_Cenobia#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "ewpxqqld": {
+         "name": "15 Argus",
+         "weblink": "https://www.speedrun.com/sotc_2018/15_Argus",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/15_Argus#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/15_Argus#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      },
+      "y9mxpplw": {
+         "name": "16 Malus",
+         "weblink": "https://www.speedrun.com/sotc_2018/16_Malus",
+         "rules": null,
+         "categories": {
+            "7kjp4p3k": {
+               "name": "Individual Normal Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/16_Malus#Individual_Normal_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Normal difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            },
+            "xk9g1gvd": {
+               "name": "Individual Hard Time Attack",
+               "weblink": "https://www.speedrun.com/sotc_2018/16_Malus#Individual_Hard_Time_Attack",
+               "type": "per-level",
+               "rules": "- NG+ (Hard difficulty) time trials. \r\n\r\n- Goes by In-Game Time (IGT) on the submission form. No Real Time needed. Include milliseconds in submissions.\r\n\r\n- The time needs to be clearly visible. We recommend the player to show the finished time as new personnal best after the colossus death cutscene, by praying to the idol.",
+               "variables": {}
+            }
+         }
+      }
+   }
+}

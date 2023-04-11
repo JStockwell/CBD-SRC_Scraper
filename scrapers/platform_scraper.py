@@ -27,6 +27,6 @@ def get_all_platforms():
             break
 
         i += 1
-        print(f"Games scanned: {i * 1000}")
+        print(f"Platforms scanned: {i * 1000}")
 
     return result
