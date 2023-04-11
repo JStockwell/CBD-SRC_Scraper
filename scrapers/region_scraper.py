@@ -3,6 +3,7 @@ import requests
 ### --- Variables --- ###
 
 URL = 'https://speedrun.com/api/v1/regions'
+MAX_CALLS = 1000
 
 ### --- Utils --- ###
 
@@ -13,7 +14,12 @@ def get_all_regions():
     i = 0
 
     while i < 1:
-        region_list = requests.get(f'{URL}?max=1000&offset={i * 1000}').json()["data"]
+        region_list = requests.get(f'{URL}?max={MAX_CALLS}&offset={i * MAX_CALLS}').json()
+
+        if "data" not in region_list:
+            return result
+        
+        region_list = region_list["data"]
 
         for region in region_list:
             result[region["id"]] = {
@@ -21,11 +27,11 @@ def get_all_regions():
             }
             print(f'Platform scanned: {region["name"]}')
 
-        if len(region_list) < 1000:
+        if len(region_list) < MAX_CALLS:
             print(f"Regions scanned: {len(result)}")
             break
 
         i += 1
-        print(f"Regions scanned: {i * 1000}")
+        print(f"Regions scanned: {i * MAX_CALLS}")
 
     return result

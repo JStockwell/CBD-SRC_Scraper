@@ -4,6 +4,8 @@ import requests
 
 LEVEL_URL = 'https://speedrun.com/api/v1/levels'
 GAME_URL = 'https://speedrun.com/api/v1/games'
+# TODO Change the max to 1000. It's 20 for testing
+MAX_CALLS = 20
 
 ### --- Utils --- ###
 
@@ -16,8 +18,12 @@ def get_all_games():
 
     # TODO Change the while loop to 1000. It's 1 for testing
     while i < 1:
-        # TODO Change the max to 1000. It's 20 for testing
-        bulk_games = requests.get(f'{GAME_URL}?_bulk=yes&max=20&offset={i * 1000}').json()["data"]
+        bulk_games = requests.get(f'{GAME_URL}?_bulk=yes&max={MAX_CALLS}&offset={i * MAX_CALLS}').json()
+
+        if "data" not in bulk_games:
+            return result
+
+        bulk_games = bulk_games["data"]
 
         c = 0
         for game in bulk_games:
@@ -25,14 +31,14 @@ def get_all_games():
             c += 1
 
             if c % 100 == 0:
-                print(f"Games scanned: {i * 1000 + c}")
+                print(f"Games scanned: {i * MAX_CALLS + c}")
             
-        if len(bulk_games) < 1000:
-            print(f"Games scanned: {i * 1000 + len(result)}")
+        if len(bulk_games) < MAX_CALLS:
+            print(f"Games scanned: {len(result)}")
             break
 
         i += 1
-        print(f"Games scanned: {i * 1000}")
+        print(f"Games scanned: {i * MAX_CALLS}")
 
     return result
 
