@@ -1,4 +1,5 @@
 import requests
+import time
 
 ### --- Variables --- ###
 
@@ -16,11 +17,25 @@ def get_all_series():
     i = 0
 
     # TODO Change the while loop to 1000. It's 1 for testing
-    while i < 1:
-        series = requests.get(f'{URL}?offset={i * MAX_CALLS}').json()
+    while i < 1000:
+        c = 0
 
-        if "data" not in series:
-            return result
+        while c < 10:
+            series = requests.get(f'{URL}?offset={i * MAX_CALLS}').json()
+
+            if "data" not in series:
+                if series["status"] == 420:
+                    print("Too many requests, waiting 5 seconds...")
+                    time.sleep(c)
+                    c += 1
+                    continue
+                
+                else:
+                    print(series)
+                    return result
+                
+            else:
+                break
         
         series = series["data"]
 

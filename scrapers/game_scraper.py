@@ -1,4 +1,5 @@
 import requests
+import time
 
 ### --- Variables --- ###
 
@@ -18,20 +19,34 @@ def get_all_games():
 
     # TODO Change the while loop to 1000. It's 1 for testing
     while i < 1:
-        bulk_games = requests.get(f'{GAME_URL}?_bulk=yes&max={MAX_CALLS}&offset={i * MAX_CALLS}').json()
+        c = 0
 
-        if "data" not in bulk_games:
-            return result
+        while c < 10:
+            bulk_games = requests.get(f'{GAME_URL}?_bulk=yes&max={MAX_CALLS}&offset={i * MAX_CALLS}').json()
 
+            if "data" not in bulk_games:
+                if bulk_games["status"] == 420:
+                    print("Too many requests, waiting 5 seconds...")
+                    time.sleep(c)
+                    c += 1
+                    continue
+                
+                else:
+                    print(bulk_games)
+                    return result
+                
+            else:
+                break
+        
         bulk_games = bulk_games["data"]
 
-        c = 0
+        j = 0
         for game in bulk_games:
             result[game["id"]] = get_game(game["id"])
-            c += 1
+            j += 1
 
-            if c % 100 == 0:
-                print(f"Games scanned: {i * MAX_CALLS + c}")
+            if j % 100 == 0:
+                print(f"Games scanned: {i * MAX_CALLS + j}")
             
         if len(bulk_games) < MAX_CALLS:
             print(f"Games scanned: {len(result)}")
@@ -51,7 +66,6 @@ def get_game(game_id):
         return result
 
     game = game["data"]
-    categories = get_categories(game_id, False)
 
     result = {
         "name": game["names"]["international"],
@@ -59,7 +73,7 @@ def get_game(game_id):
         "release-date": game["release-date"],
         "platforms": game["platforms"],
         "regions": game["regions"],
-        "categories": categories,
+        "categories": get_categories(game_id, False),
         "levels": get_levels(game_id)
     }
 
