@@ -1,5 +1,6 @@
 import requests
 import time
+import logging
 
 ### --- Variables --- ###
 
@@ -11,8 +12,8 @@ MAX_CALLS = 20
 
 ### --- Functions --- ###
 
-def get_all_series():
-    result = {}
+def get_all_series(collection):
+    result = []
 
     i = 0
 
@@ -25,14 +26,16 @@ def get_all_series():
 
             if "data" not in series:
                 if series["status"] == 420:
+                    logging.warning("Too many requests, waiting 5 seconds...")
                     print("Too many requests, waiting 5 seconds...")
                     time.sleep(c)
                     c += 1
                     continue
                 
                 else:
-                    print(series)
-                    return result
+                    logging.error(f"Error on series. Result len {len(result)}. Saving data...")
+                    x = collection.insert_many(result)
+                    return x.inserted_ids
                 
             else:
                 break
@@ -40,23 +43,29 @@ def get_all_series():
         series = series["data"]
 
         for serie in series:
-            result[serie["id"]] = {
+            post = {
+                "id": serie["id"],
                 "name": serie["names"]["international"],
                 "abbreviation": serie["abbreviation"],
                 "weblink": serie["weblink"],
                 "games": get_serie_games(serie["id"])
             }
 
+            result.append(post)
+            logging.info(f"Serie scanned: {serie['names']['international']}")
             print(f"Serie scanned: {serie['names']['international']}")
 
         if len(series) < MAX_CALLS:
+            logging.info(f"Series scanned: {len(result)}")
             print(f"Series scanned: {len(result)}")
             break
 
         i += 1
+        logging.info(f"Series scanned: {i * MAX_CALLS}")
         print(f"Series scanned: {i * MAX_CALLS}")
 
-    return result
+    x = collection.insert_many(result)
+    return x.inserted_ids
 
 
 
