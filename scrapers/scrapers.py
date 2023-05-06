@@ -10,7 +10,7 @@ from scrapers.series_scraper import get_all_series
 ### --- Variables --- ###
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
-mydb = myclient["cbd_speedrun_scraper_test"]
+mydb = myclient["cbd_speedrun_scraper"]
 
 ### --- Functions --- ###
 def scrape_regions():

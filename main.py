@@ -1,6 +1,6 @@
 import logging
 
-from utils.scrapers import scrape_regions, scrape_platforms, scrape_games, scrape_series
+from scrapers.scrapers import scrape_regions, scrape_platforms, scrape_games, scrape_series
 
 ### --- Variables --- ###
 logging.basicConfig(filename='main.log', level=logging.INFO, filemode='w')
