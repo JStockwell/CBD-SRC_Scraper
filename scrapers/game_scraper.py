@@ -2,6 +2,8 @@ import requests
 import time
 import logging
 
+from utils.api_call import api_call
+
 ### --- Variables --- ###
 
 LEVEL_URL = 'https://speedrun.com/api/v1/levels'
@@ -15,26 +17,13 @@ GAME_URL = 'https://speedrun.com/api/v1/games'
 def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, level_collection, variable_collection):
     result = []
     flag = False
-    i = 0
 
-    while i < 10:
-        bulk_games = requests.get(f'{GAME_URL}?_bulk=yes&max={MAX_GAME_CALLS}&offset={offset}').json()
+    bulk_games = api_call(f'{GAME_URL}?_bulk=yes&max={MAX_GAME_CALLS}&offset={offset}')
 
-        if "data" not in bulk_games:
-            if bulk_games["status"] == 420:
-                i += 1
-                logging.warning(f"Too many requests, {i} waiting  seconds...")
-                print(f"Too many requests, waiting {i} seconds...")
-                time.sleep(i)
-                continue
-            
-            else:
-                logging.error(f"Error on games. Number {offset}. Saving data...")
-                return True
-            
-        else:
-            break
-
+    if bulk_games is None:
+        logging.error(f"Error on games. Number {offset}. Saving data...")
+        return True
+    
     bulk_games = bulk_games["data"]
 
     j = 0
@@ -61,10 +50,12 @@ def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, leve
 # Step 2: Get the information for a single game
 def get_game(game_id, category_collection, level_collection, variable_collection):
     result = {}
-    game = requests.get(f'{GAME_URL}/{game_id}').json()
 
-    if "data" not in game:
-        return result
+    game = api_call(f'{GAME_URL}/{game_id}')
+
+    if game is None:
+        logging.error(f"Error on game {game_id}")
+        return {"id": game_id, "error": True}
 
     game = game["data"]
 
@@ -89,12 +80,15 @@ def get_categories(ids, level_flag, collection, variable_collection):
     category_ids = []
 
     if level_flag:
-        categories = requests.get(f'{LEVEL_URL}/{ids[1]}/categories?embed=variables').json()
+        categories = api_call(f'{LEVEL_URL}/{ids[1]}/categories?embed=variables')
     else:
-        categories = requests.get(f'{GAME_URL}/{ids[0]}/categories?embed=variables').json()
+        categories = api_call(f'{GAME_URL}/{ids[0]}/categories?embed=variables')
 
-    if "data" not in categories:
-        return result
+    if categories is None:
+        if level_flag:
+            return{"id": ids[1], "error": True}
+        else:
+            return{"id": ids[0], "error": True}
 
     categories = categories["data"]
     for category in categories:
@@ -149,10 +143,11 @@ def format_variables(variables, collection):
 # Step 5: Get all levels for a single game
 def get_levels(game_id, collection, category_collection, variable_collection):
     result = []
-    levels = requests.get(f'{GAME_URL}/{game_id}/levels').json()
 
-    if "data" not in levels:
-        return result
+    levels = api_call(f'{GAME_URL}/{game_id}/levels')
+
+    if levels is None:
+        return {"id": game_id, "error": True}
     
     levels = levels["data"]
 

@@ -18,7 +18,7 @@ def get_all_platforms(collection):
         platform_list = requests.get(f'{URL}?max={MAX_CALLS}&offset={i * MAX_CALLS}').json()
 
         if "data" not in platform_list:
-            return result
+            break
         
         platform_list = platform_list["data"]
 

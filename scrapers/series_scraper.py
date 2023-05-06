@@ -2,6 +2,8 @@ import requests
 import time
 import logging
 
+from utils.api_call import api_call
+
 ### --- Variables --- ###
 
 URL = 'https://speedrun.com/api/v1/series'
@@ -18,27 +20,13 @@ def get_all_series(collection):
     i = 0
 
     while i < 1000:
-        c = 0
+        series = api_call(f'{URL}?offset={i * MAX_CALLS}')
 
-        while c < 10:
-            series = requests.get(f'{URL}?offset={i * MAX_CALLS}').json()
+        if series is None:
+            logging.error(f"Error on series. Result len {len(result)}. Saving data...")
+            x = collection.insert_many(result)
+            return x.inserted_ids
 
-            if "data" not in series:
-                if series["status"] == 420:
-                    c += 1
-                    logging.warning(f"Too many requests, waiting {c} seconds...")
-                    print(f"Too many requests, waiting {c} seconds...")
-                    time.sleep(c)
-                    continue
-                
-                else:
-                    logging.error(f"Error on series. Result len {len(result)}. Saving data...")
-                    x = collection.insert_many(result)
-                    return x.inserted_ids
-                
-            else:
-                break
-        
         series = series["data"]
 
         for serie in series:
@@ -71,11 +59,12 @@ def get_all_series(collection):
 def get_serie_games(id):
     result = []
 
-    games = requests.get(f'{URL}/{id}/games').json()
+    games = api_call(f'{URL}/{id}/games')
 
-    if "data" not in games:
-        return result
-    
+    if games is None:
+        logging.error(f"Error on serie games. Serie ID {id}. Saving data...")
+        return None
+
     for game in games["data"]:
         result.append(game["id"])
 

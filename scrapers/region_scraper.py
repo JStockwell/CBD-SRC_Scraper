@@ -18,7 +18,7 @@ def get_all_regions(collection):
         region_list = requests.get(f'{URL}?max={MAX_CALLS}&offset={i * MAX_CALLS}').json()
 
         if "data" not in region_list:
-            return result
+            break
         
         region_list = region_list["data"]
 
