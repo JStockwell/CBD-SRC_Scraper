@@ -22,6 +22,11 @@ flags[1] = input("Scrape platforms? (y/n) ") == "y"
 flags[2] = input("Scrape series? (y/n) ") == "y"
 flags[3] = input("Scrape games? (y/n) ") == "y"
 
+if flags[3]:
+    offset = int(input("Offset: "))
+    MAX_GAME_CALLS = int(input("Max game calls: "))
+    clear_db = input("Clear database? (y/n) ") == "y"
+
 if flags[0]:
     scrape_regions()
 
@@ -32,7 +37,4 @@ if flags[2]:
     scrape_series()
 
 if flags[3]:
-    offset = int(input("Offset: "))
-    MAX_GAME_CALLS = int(input("Max game calls: "))
-    clear_db = input("Clear database? (y/n) ") == "y"
     scrape_games(offset, MAX_GAME_CALLS, clear_db)
