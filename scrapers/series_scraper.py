@@ -27,8 +27,6 @@ def get_all_series(collection):
             x = collection.insert_many(result)
             return x.inserted_ids
 
-        series = series["data"]
-
         for serie in series:
             post = {
                 "id": serie["id"],
@@ -65,7 +63,7 @@ def get_serie_games(id):
         logging.error(f"Error on serie games. Serie ID {id}. Saving data...")
         return None
 
-    for game in games["data"]:
+    for game in games:
         result.append(game["id"])
 
     return result

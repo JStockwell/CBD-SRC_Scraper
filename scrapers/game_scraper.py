@@ -1,5 +1,3 @@
-import requests
-import time
 import logging
 
 from utils.api_call import api_call
@@ -9,13 +7,17 @@ from utils.api_call import api_call
 LEVEL_URL = 'https://speedrun.com/api/v1/levels'
 GAME_URL = 'https://speedrun.com/api/v1/games'
 
+games_list = []
+categories_list = []
+levels_list = []
+variables_list = []
+
 ### --- Utils --- ###
 
 ### --- Functions --- ###
 
 # Step 1 & 3: Get all games, with ID, name and weblink with extra info
 def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, level_collection, variable_collection):
-    result = []
     flag = False
 
     bulk_games = api_call(f'{GAME_URL}?_bulk=yes&max={MAX_GAME_CALLS}&offset={offset}')
@@ -23,12 +25,11 @@ def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, leve
     if bulk_games is None:
         logging.error(f"Error on games. Number {offset}. Saving data...")
         return True
-    
-    bulk_games = bulk_games["data"]
 
     j = 0
     for game in bulk_games:
-        result.append(get_game(game["id"], category_collection, level_collection, variable_collection))
+        get_game(game["id"])
+
         j += 1
 
         if j % 100 == 0:
@@ -44,12 +45,23 @@ def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, leve
         logging.info(f"Games scanned: {offset + MAX_GAME_CALLS}")
         print(f"Games scanned: {offset + MAX_GAME_CALLS}")
 
-    x = game_collection.insert_many(result)
+    if len(games_list) > 0:
+        game_collection.insert_many(games_list)
+
+    if len(categories_list) > 0:
+        category_collection.insert_many(categories_list)
+
+    if len(levels_list) > 0:
+        level_collection.insert_many(levels_list)
+
+    if len(variables_list) > 0:
+        variable_collection.insert_many(variables_list)
+
     return flag
 
 # Step 2: Get the information for a single game
-def get_game(game_id, category_collection, level_collection, variable_collection):
-    result = {}
+def get_game(game_id):
+    post = {}
 
     game = api_call(f'{GAME_URL}/{game_id}')
 
@@ -57,9 +69,7 @@ def get_game(game_id, category_collection, level_collection, variable_collection
         logging.error(f"Error on game {game_id}")
         return {"id": game_id, "error": True}
 
-    game = game["data"]
-
-    result = {
+    post = {
         "id": game["id"],
         "name": game["names"]["international"],
         "weblink": game["weblink"],
@@ -68,15 +78,17 @@ def get_game(game_id, category_collection, level_collection, variable_collection
         "regions": game["regions"]
     }
 
-    get_levels(game_id, level_collection, category_collection, variable_collection)
-    get_categories([game_id,None], False, category_collection, variable_collection)
+    get_levels(game_id)
+    get_categories([game_id,None], False)
+
     logging.info(f"Game scanned: {game['names']['international']}")
     print(f"Game scanned: {game['names']['international']}")
-    return result
+
+    games_list.append(post)
+    return 0
 
 # Step 4: Get all categories for a single game
-def get_categories(ids, level_flag, collection, variable_collection):
-    result = []
+def get_categories(ids, level_flag):
     category_ids = []
 
     if level_flag:
@@ -89,8 +101,7 @@ def get_categories(ids, level_flag, collection, variable_collection):
             return{"id": ids[1], "error": True}
         else:
             return{"id": ids[0], "error": True}
-
-    categories = categories["data"]
+        
     for category in categories:
         post = {
             "id": category["id"],
@@ -102,23 +113,20 @@ def get_categories(ids, level_flag, collection, variable_collection):
             "rules": category["rules"],
         }
 
-        result.append(post)
+        categories_list.append(post)
         category_ids.append(category["id"])
-        format_variables(category["variables"]["data"], variable_collection)
+
+        format_variables(category["variables"]["data"])
+
         logging.info(f"Category scanned: {category['name']}")
         print(f"Category scanned: {category['name']}")
 
-    if len(result) > 0:
-        x = collection.insert_many(result)
-        return x.inserted_ids
-    else:
-        return "No categories found"
+    return 0
 
 # Step 4.5 & 5.5: Format the variables for a single game
-def format_variables(variables, collection):
-    result = []
-
+def format_variables(variables):
     for variable in variables:
+
         post = {
             "id": variable["id"],
             "category": variable["category"],
@@ -129,27 +137,18 @@ def format_variables(variables, collection):
             "is-subcategory": variable["is-subcategory"]
         }
 
-        result.append(post)
+        variables_list.append(post)
         logging.info(f"Variable scanned: {variable['name']}")
         print(f"Variable scanned: {variable['name']}")
 
-    if len(result) > 0:
-        x = collection.insert_many(result)
-        return x.inserted_ids
-    
-    else:
-        return "No variables found"
+    return 0
 
 # Step 5: Get all levels for a single game
-def get_levels(game_id, collection, category_collection, variable_collection):
-    result = []
-
+def get_levels(game_id):
     levels = api_call(f'{GAME_URL}/{game_id}/levels')
 
     if levels is None:
         return {"id": game_id, "error": True}
-    
-    levels = levels["data"]
 
     for level in levels:
         post = {
@@ -160,13 +159,9 @@ def get_levels(game_id, collection, category_collection, variable_collection):
             "rules": level["rules"],
         }
 
-        get_categories([game_id, level["id"]], True, category_collection, variable_collection)
-        result.append(post)
+        get_categories([game_id, level["id"]], True)
+        levels_list.append(post)
         logging.info(f"Level scanned: {level['name']}")
         print(f"Level scanned: {level['name']}")
 
-    if len(result) > 0:
-        x = collection.insert_many(result)
-        return x.inserted_ids
-    else:
-        return "No levels found"
+    return 0
