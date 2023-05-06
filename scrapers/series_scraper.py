@@ -17,7 +17,6 @@ def get_all_series(collection):
 
     i = 0
 
-    # TODO Change the while loop to 1000. It's 1 for testing
     while i < 1000:
         c = 0
 
@@ -26,10 +25,10 @@ def get_all_series(collection):
 
             if "data" not in series:
                 if series["status"] == 420:
-                    logging.warning("Too many requests, waiting 5 seconds...")
-                    print("Too many requests, waiting 5 seconds...")
-                    time.sleep(c)
                     c += 1
+                    logging.warning(f"Too many requests, waiting {c} seconds...")
+                    print(f"Too many requests, waiting {c} seconds...")
+                    time.sleep(c)
                     continue
                 
                 else:

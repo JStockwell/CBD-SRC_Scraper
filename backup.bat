@@ -1,0 +1,1 @@
+mongodump --db=cbd_speedrun_scraper

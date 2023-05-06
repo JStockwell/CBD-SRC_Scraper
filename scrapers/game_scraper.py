@@ -6,61 +6,57 @@ import logging
 
 LEVEL_URL = 'https://speedrun.com/api/v1/levels'
 GAME_URL = 'https://speedrun.com/api/v1/games'
-MAX_CALLS = 1000
 
 ### --- Utils --- ###
 
 ### --- Functions --- ###
 
 # Step 1 & 3: Get all games, with ID, name and weblink with extra info
-def get_all_games(game_collection, category_collection, level_collection, variable_collection):
+def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, level_collection, variable_collection):
     result = []
+    flag = False
     i = 0
 
-    while i < 1000:
-        c = 0
+    while i < 10:
+        bulk_games = requests.get(f'{GAME_URL}?_bulk=yes&max={MAX_GAME_CALLS}&offset={offset}').json()
 
-        while c < 10:
-            bulk_games = requests.get(f'{GAME_URL}?_bulk=yes&max={MAX_CALLS}&offset={i * MAX_CALLS}').json()
-
-            if "data" not in bulk_games:
-                if bulk_games["status"] == 420:
-                    logging.warning("Too many requests, waiting 5 seconds...")
-                    print("Too many requests, waiting 5 seconds...")
-                    time.sleep(c)
-                    c += 1
-                    continue
-                
-                else:
-                    logging.error(f"Error on games. Result len {len(result)}. Saving data...")
-                    x = game_collection.insert_many(result)
-                    return x.inserted_ids
-                
-            else:
-                break
-        
-        bulk_games = bulk_games["data"]
-
-        j = 0
-        for game in bulk_games:
-            result.append(get_game(game["id"], category_collection, level_collection, variable_collection))
-            j += 1
-
-            if j % 100 == 0:
-                logging.info(f"Games scanned: {i * MAX_CALLS + j}")
-                print(f"Games scanned: {i * MAX_CALLS + j}")
+        if "data" not in bulk_games:
+            if bulk_games["status"] == 420:
+                i += 1
+                logging.warning(f"Too many requests, {i} waiting  seconds...")
+                print(f"Too many requests, waiting {i} seconds...")
+                time.sleep(i)
+                continue
             
-        if len(bulk_games) < MAX_CALLS:
-            logging.info(f"Games scanned: {len(result)}")
-            print(f"Games scanned: {len(result)}")
+            else:
+                logging.error(f"Error on games. Number {offset}. Saving data...")
+                return True
+            
+        else:
             break
 
-        i += 1
-        logging.info(f"Games scanned: {i * MAX_CALLS}")
-        print(f"Games scanned: {i * MAX_CALLS}")
+    bulk_games = bulk_games["data"]
+
+    j = 0
+    for game in bulk_games:
+        result.append(get_game(game["id"], category_collection, level_collection, variable_collection))
+        j += 1
+
+        if j % 100 == 0:
+            logging.info(f"Games scanned: {offset + j}")
+            print(f"Games scanned: {offset + j}")
+
+    if len(bulk_games) < MAX_GAME_CALLS:
+        logging.info(f"Games scanned: {offset + len(bulk_games)}")
+        print(f"Games scanned: {offset + len(bulk_games)}")
+        flag = True
+
+    else:
+        logging.info(f"Games scanned: {offset + MAX_GAME_CALLS}")
+        print(f"Games scanned: {offset + MAX_GAME_CALLS}")
 
     x = game_collection.insert_many(result)
-    return x.inserted_ids
+    return flag
 
 # Step 2: Get the information for a single game
 def get_game(game_id, category_collection, level_collection, variable_collection):
