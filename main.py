@@ -3,9 +3,8 @@ import logging
 from scrapers.scrapers import scrape_regions, scrape_platforms, scrape_games, scrape_series
 
 ### --- Variables --- ###
-logging.basicConfig(filename='main.log', level=logging.INFO, filemode='w')
 
-MAX_GAME_CALLS = 10
+logging.basicConfig(filename='maiimage.pngn.log', level=logging.INFO, filemode='w')
 
 ### --- Utils --- ###
 
@@ -25,6 +24,11 @@ flags[3] = input("Scrape games? (y/n) ") == "y"
 if flags[3]:
     offset = int(input("Offset: "))
     MAX_GAME_CALLS = int(input("Max game calls: "))
+    
+    while MAX_GAME_CALLS > 1000 or MAX_GAME_CALLS < 1:
+        print("Max game calls must be greater than 0 and less than 1000")
+        MAX_GAME_CALLS = int(input("Max game calls: "))
+        
     clear_db = input("Clear database? (y/n) ") == "y"
 
 if flags[0]:
