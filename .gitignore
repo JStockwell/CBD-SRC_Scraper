@@ -130,3 +130,6 @@ dmypy.json
 
 # MongoDB Dump
 dump/
+
+# Reference jsons
+json/

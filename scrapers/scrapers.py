@@ -23,7 +23,7 @@ def scrape_regions():
 
     regions_end_time = time.time() - regions_start_time
     logging.info(f"Region scraping took {regions_end_time} seconds")
-    print(f"Region scraping took {regions_end_time} seconds")
+    #print(f"Region scraping took {regions_end_time} seconds")
 
 def scrape_platforms():
     platforms_start_time = time.time()
@@ -53,13 +53,14 @@ def scrape_games(offset, MAX_GAME_CALLS, clear_db):
         level_col.drop()
         var_col.drop()
 
+    # while not flag:
+    #     flag = get_games(offset, MAX_GAME_CALLS, game_col, cat_col, level_col, var_col)
+    #     offset += MAX_GAME_CALLS
 
-    while not flag:
-        flag = get_games(offset, MAX_GAME_CALLS, game_col, cat_col, level_col, var_col)
-        offset += MAX_GAME_CALLS
+    #     if offset + MAX_GAME_CALLS > 40000:
+    #         break
 
-        if offset + MAX_GAME_CALLS > 40000:
-            break
+    get_games(offset, MAX_GAME_CALLS, game_col, cat_col, level_col, var_col)
 
     games_end_time = time.time() - games_start_time
     logging.info(f"Game scraping took {games_end_time} seconds")

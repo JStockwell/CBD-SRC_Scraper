@@ -31,16 +31,16 @@ def get_all_regions(collection):
             result.append(post)
             
             logging.info(f'Platform scanned: {region["name"]}')
-            print(f'Platform scanned: {region["name"]}')
+            #print(f'Platform scanned: {region["name"]}')
 
         if len(region_list) < MAX_CALLS:
             logging.info(f"Regions scanned: {len(result)}")
-            print(f"Regions scanned: {len(result)}")
+            #print(f"Regions scanned: {len(result)}")
             break
 
         i += 1
         logging.info(f"Regions scanned: {i * MAX_CALLS}")
-        print(f"Regions scanned: {i * MAX_CALLS}")
+        #print(f"Regions scanned: {i * MAX_CALLS}")
 
     x = collection.insert_many(result)
     return x.inserted_ids

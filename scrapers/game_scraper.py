@@ -1,5 +1,7 @@
 import logging
 
+from bson.objectid import ObjectId
+
 from utils.api_call import api_call
 
 ### --- Variables --- ###
@@ -24,6 +26,7 @@ def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, leve
 
     if bulk_games is None:
         logging.error(f"Error on games. Number {offset}. Saving data...")
+        print(f"Error on games. Number {offset}. Saving data...")
         return True
 
     j = 0
@@ -46,16 +49,32 @@ def get_games(offset, MAX_GAME_CALLS, game_collection, category_collection, leve
         print(f"Games scanned: {offset + MAX_GAME_CALLS}")
 
     if len(games_list) > 0:
-        game_collection.insert_many(games_list)
+        for game in games_list:
+            game_collection.insert_one(game)
 
     if len(categories_list) > 0:
-        category_collection.insert_many(categories_list)
+        for category in categories_list:
+            category_collection.insert_one(category)
 
     if len(levels_list) > 0:
-        level_collection.insert_many(levels_list)
+        for level in levels_list:
+            level_collection.insert_one(level)
 
     if len(variables_list) > 0:
-        variable_collection.insert_many(variables_list)
+        for variable in variables_list:
+            variable_collection.insert_one(variable)
+
+    # if len(games_list) > 0:
+    #     game_collection.insert_many(games_list)
+
+    # if len(categories_list) > 0:
+    #     category_collection.insert_many(categories_list)
+
+    # if len(levels_list) > 0:
+    #     level_collection.insert_many(levels_list)
+
+    # if len(variables_list) > 0:
+    #     variable_collection.insert_many(variables_list)
 
     return flag
 
@@ -67,6 +86,7 @@ def get_game(game_id):
 
     if game is None:
         logging.error(f"Error on game {game_id}")
+        print(f"Error on game {game_id}")
         return {"id": game_id, "error": True}
 
     post = {
@@ -82,7 +102,7 @@ def get_game(game_id):
     get_categories([game_id,None], False)
 
     logging.info(f"Game scanned: {game['names']['international']}")
-    print(f"Game scanned: {game['names']['international']}")
+    #print(f"Game scanned: {game['names']['international']}")
 
     games_list.append(post)
     return 0
@@ -119,7 +139,7 @@ def get_categories(ids, level_flag):
         format_variables(category["variables"]["data"])
 
         logging.info(f"Category scanned: {category['name']}")
-        print(f"Category scanned: {category['name']}")
+        #print(f"Category scanned: {category['name']}")
 
     return 0
 
@@ -139,7 +159,7 @@ def format_variables(variables):
 
         variables_list.append(post)
         logging.info(f"Variable scanned: {variable['name']}")
-        print(f"Variable scanned: {variable['name']}")
+        #print(f"Variable scanned: {variable['name']}")
 
     return 0
 
@@ -162,6 +182,6 @@ def get_levels(game_id):
         get_categories([game_id, level["id"]], True)
         levels_list.append(post)
         logging.info(f"Level scanned: {level['name']}")
-        print(f"Level scanned: {level['name']}")
+        #print(f"Level scanned: {level['name']}")
 
     return 0

@@ -38,16 +38,16 @@ def get_all_series(collection):
 
             result.append(post)
             logging.info(f"Serie scanned: {serie['names']['international']}")
-            print(f"Serie scanned: {serie['names']['international']}")
+            #print(f"Serie scanned: {serie['names']['international']}")
 
         if len(series) < MAX_CALLS:
             logging.info(f"Series scanned: {len(result)}")
-            print(f"Series scanned: {len(result)}")
+            #print(f"Series scanned: {len(result)}")
             break
 
         i += 1
         logging.info(f"Series scanned: {i * MAX_CALLS}")
-        print(f"Series scanned: {i * MAX_CALLS}")
+        #print(f"Series scanned: {i * MAX_CALLS}")
 
     x = collection.insert_many(result)
     return x.inserted_ids

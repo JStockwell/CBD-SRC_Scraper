@@ -3,20 +3,19 @@ import logging
 import time
 
 def api_call(URL):
-    i = 1
+    i = 0
 
-    while i < 11:
+    while i < 101:
         request = requests.get(URL).json()
 
         if "data" not in request:
             if request["status"] == 420:
-                logging.warning(f"Too many requests, waiting {i / 10} seconds...")
-                print(f"Too many requests, waiting {i / 10} seconds...")
-                time.sleep(i / 10)
+                if i % 10 == 0 or i == 0:
+                    logging.warning(f"Too many requests, trying again...")
+                    #print(f"Too many requests, trying again...")
                 i += 1
             
             else:
-                print("I broke status")
                 break
             
         else:

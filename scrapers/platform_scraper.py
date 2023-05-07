@@ -32,16 +32,16 @@ def get_all_platforms(collection):
             result.append(post)
 
             logging.info(f'Platform scanned: {platform["name"]}')
-            print(f'Platform scanned: {platform["name"]}')
+            #print(f'Platform scanned: {platform["name"]}')
 
         if len(platform_list) < MAX_CALLS:
             logging.info(f"Platforms scanned: {len(result)}")
-            print(f"Platforms scanned: {len(result)}")
+            #print(f"Platforms scanned: {len(result)}")
             break
 
         i += 1
         logging.info(f"Platforms scanned: {i * MAX_CALLS}")
-        print(f"Platforms scanned: {i * MAX_CALLS}")
+        #print(f"Platforms scanned: {i * MAX_CALLS}")
 
     x = collection.insert_many(result)
     return x.inserted_ids
