@@ -1,7 +1,5 @@
 import logging
 
-from bson.objectid import ObjectId
-
 from utils.api_call import api_call
 
 ### --- Variables --- ###
