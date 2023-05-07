@@ -6,12 +6,6 @@ from scrapers.scrapers import scrape_regions, scrape_platforms, scrape_games, sc
 
 logging.basicConfig(filename='maiimage.pngn.log', level=logging.INFO, filemode='w')
 
-### --- Utils --- ###
-
-
-### --- Functions --- ###
-
-
 ### --- Executions --- ###
 # regions, platforms, series, games
 flags = [False] * 4

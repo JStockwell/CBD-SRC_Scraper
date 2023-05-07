@@ -9,7 +9,6 @@ MAX_CALLS = 1000
 ### --- Utils --- ###
 
 ### --- Functions --- ###
-
 def get_all_regions(collection):
     result = []
     i = 0
